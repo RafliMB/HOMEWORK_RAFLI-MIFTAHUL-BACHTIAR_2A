@@ -28,6 +28,9 @@ def search():
         if input_data in i['nama']:
             print(f"{number}. {i["nama"]} , Stok : {i["stok"]}")
             number += 1
+        else:
+            print("--- Data tidak ditemukan ---")
+            break
     return ""
 
 def list():
