@@ -24,14 +24,17 @@ def delete():
 def search():
     input_data = input("Cari nama barang : ").title()
     number = 1
+    result = []
     for i in stok:
         if input_data in i['nama']:
-            print(f"{number}. {i["nama"]} , Stok : {i["stok"]}")
-            number += 1
+            result.append(i)
+        if result:
+            for i in result:
+                print(f"{number}. {i["nama"]} , Stok : {i["stok"]}")
+                number += 1
         else:
             print("--- Data tidak ditemukan ---")
-            break
-    return ""
+        return ""
 
 def list():
     print("--- Data barang ---")
