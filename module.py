@@ -37,7 +37,7 @@ def search():
             print(f"{number}. {i['nama']} , Stok : {i['stok']}")
             number += 1
     else:
-        print("--- Data tidak ditemukan ---")
+        print("--- Data barang tidak ditemukan ---")
     return '\n'
 
 def list():
