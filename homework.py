@@ -1,4 +1,4 @@
-import modul as data
+import module as data
 
 print("Selamat datang di program manajemen stock barang!")
 print("Pilihan :")
