@@ -1,49 +1,56 @@
 stok = []
+
 def add():
-    nama_barang = input("Masukkan nama barang : ").title()
-    stok_barang = input("Masukkan stok barang : ")
-    barang = {"nama" : nama_barang, "stok" : stok_barang}
-    stok.append(barang)
-    return "--- Data berhasil ditambahkan ---"
+    input_nama = input("Masukkan nama barang : ").title()
+    input_stok = int(input("Masukkan stok barang : "))
+    item = {'nama' : input_nama, 'stok' : input_stok}
+    stok.append(item)
+    print("--- Data berhasil ditambahkan ---")
+    return '\n'
 
 def edit():
-    input_data = int(input("Hapus data ke : "))
-    input_data -= 1
-    input_nama = input("Masukkan nama : ").title()
-    input_stok = int(input("Masukkan stok : "))
-    data_change = {"nama" : input_nama, "stok" : input_stok}
-    stok[input_data] = data_change
-    return "--- Data berhasil diperbarui ---"
+    index = int(input("Ubah data ke : "))
+    index -= 1
+    input_nama = input("Masukkan nama barang : ").title()
+    input_stok = int(input("Masukkan stok barang : "))
+    data_change = {'nama' : input_nama, 'stok' : input_stok}
+    stok[index] = data_change
+    print("--- Data berhasil diperbarui ---")
+    return '\n'
 
 def delete():
-    input_data = int(input("Hapus data ke : "))
-    input_data -= 1
-    del stok[input_data]
-    return "--- Data berhasil dihapus ---"
+    index = int(input("Hapus data ke : "))
+    index -= 1
+    del stok[index]
+    print("--- Data berhasil dihapus ---")
+    return '\n'
 
 def search():
-    input_data = input("Cari nama barang : ").title()
+    data_input = input("Cari nama barang : ").title()
     number = 1
-    result = []
+    stock = []
     for i in stok:
-        if input_data in i['nama']:
-            result.append(i)
-        if result:
-            for i in result:
-                print(f"{number}. {i["nama"]} , Stok : {i["stok"]}")
-                number += 1
-        else:
-            print("--- Data tidak ditemukan ---")
-        return ""
+        if data_input in i['nama']:
+            stock.append(i)
+    if stock:
+        for i in stock:
+            print(f"{number}. {i['nama']} , Stok : {i['stok']}")
+            number += 1
+    else:
+        print("--- Data tidak ditemukan ---")
+    return '\n'
 
 def list():
-    print("--- Data barang ---")
     number = 1
-    for i in stok:
-        print(f"{number}. {i["nama"]} , Stok : {i["stok"]}")
-        number += 1
-    return ""
+    if stok:
+        print("--- Data barang ---")
+        for i in stok:
+            print(f"{number}. {i['nama']} , Stok : {i['stok']}")
+            number += 1
+    else:
+        print("--- Data barang kosong ---")
+    return '\n'
 
 def total():
-    data = f"Jumlah data tersimpan : {len(stok)}"
-    return data
+    print(f"Jumlah data tersimpan : {len(stok)}")
+    return '\n'
