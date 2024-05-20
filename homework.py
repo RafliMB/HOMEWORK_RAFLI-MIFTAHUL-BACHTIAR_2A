@@ -16,19 +16,15 @@ while True:
     print("=====================================")
     if pilihan == 1:
         print(data.add())
-        print("")
     elif pilihan == 2:
         print(data.edit())
-        print("")
     elif pilihan == 3:
         print(data.delete())
-        print("")
     elif pilihan == 4:
         print(data.search())
     elif pilihan == 5:
         print(data.list())
     elif pilihan == 6:
         print(data.total())
-        print("")
     elif pilihan == 7:
         exit()
