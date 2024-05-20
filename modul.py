@@ -1,4 +1,4 @@
-stok = []
+stok = [test]
 
 def add():
     input_nama = input("Masukkan nama barang : ").title()
