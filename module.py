@@ -25,12 +25,12 @@ def delete():
 def search():
     data_input = input("Cari nama barang : ").lower()
     number = 1
-    items = []
+    list = []
     for i in stok:
         if data_input in i['nama']:
-            stock.append(i)
-    if items:
-        for i in items:
+            list.append(i)
+    if list:
+        for i in list:
             print(f"{number}. {i['nama']} , Stok : {i['stok']}")
             number += 1
     else:
