@@ -15,16 +15,22 @@ while True:
     pilihan = int(input("Masukkan pilihan : "))
     print("=====================================")
     if pilihan == 1:
-        print(data.add())
+        data.add()
+        print('\n')
     elif pilihan == 2:
-        print(data.edit())
+        data.edit()
+        print('\n')
     elif pilihan == 3:
-        print(data.delete())
+        data.delete()
+        print('\n')
     elif pilihan == 4:
-        print(data.search())
+        data.search()
+        print('\n')
     elif pilihan == 5:
-        print(data.list())
+        data.list()
+        print('\n')
     elif pilihan == 6:
-        print(data.total())
+        data.total()
+        print('\n')
     elif pilihan == 7:
         exit()
